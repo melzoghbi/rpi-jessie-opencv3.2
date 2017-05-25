@@ -18,15 +18,19 @@ For this reason, I decided to create this docker file to make it easier to build
 
 ## How to use a docker file on a Raspberry Pi Zero?
 
-1) Open the terminal on your RPI Zero.
+1) Open the terminal window on your RPI Zero.
 
-2) Clone this git hub on your RPI by executing below command:
+2) Clone this git hub repo on your RPI by executing below command:
 
 ```
 git clone https://github.com/melzoghbi/rpi-jessie-opencv3.2.git
 ```
 
 2) Navigate to the directory where the repo has been downloaded:
+
+```
+cd rpi-jessie-opencv3.2
+```
 
 3) Build the image from the docker file:
 
