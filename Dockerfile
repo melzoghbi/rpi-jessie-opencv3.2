@@ -2,7 +2,7 @@ FROM resin/rpi-raspbian:latest
 
 ENV OPENCV_VERSION 3.2.0
 
-# install opencv3 as detailied in: http://www.pyimagesearch.com/2016/04/18/install-guide-raspberry-pi-3-raspbian-jessie-opencv-3/
+# install opencv3 as detailied in this article: http://www.pyimagesearch.com/2016/04/18/install-guide-raspberry-pi-3-raspbian-jessie-opencv-3/
 
 # update apt
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
@@ -51,7 +51,7 @@ RUN cd /tmp/opencv-$OPENCV_VERSION && \
 	-D INSTALL_PYTHON_EXAMPLES=ON \
 	-D OPENCV_EXTRA_MODULES_PATH=/tmp/opencv_contrib-$OPENCV_VERSION/modules \
 	-D BUILD_EXAMPLES=ON .. && \
-	make -j4 && \
+	# make -j4 && \    -- No need to run on 4 cores since RPI Zero is a single core board
 	make && \
 	make install && \
 	# ldconfig && \
